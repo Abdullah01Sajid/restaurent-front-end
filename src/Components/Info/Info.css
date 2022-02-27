@@ -1,0 +1,27 @@
+.second-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+.second-section .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.second-section .top-icon img {
+  margin-left: 30px;
+  height: 130px;
+  width: 130px;
+}
+.second-section .middle-icon img {
+  height: 130px;
+  width: 130px;
+}
+.second-section .bottom-icon img {
+  height: 130px;
+  width: 130px;
+}

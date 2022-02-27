@@ -1,0 +1,20 @@
+.nav-bar header {
+  height: 50px;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  color: white;
+  font-family: "Itim";
+  background-color: var(--main-nav-color);
+}
+.nav-bar .logo {
+  height: 25px;
+  margin-left: auto;
+  width: 25px;
+}
+.nav-bar .logo svg {
+  fill: white;
+}

@@ -25,3 +25,18 @@
   height: 130px;
   width: 130px;
 }
+@media screen and (min-width: 800px) {
+  .second-section .icons {
+    flex-direction: row;
+    gap: 55%;
+  }
+  .second-section .icons h3 {
+    padding-left: 20px;
+  }
+  .second-section .top-icon img,
+  .second-section .middle-icon img,
+  .second-section .bottom-icon img {
+    height: 150px;
+    width: 150px;
+  }
+}

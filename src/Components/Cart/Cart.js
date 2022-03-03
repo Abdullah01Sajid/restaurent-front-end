@@ -1,7 +1,7 @@
 import "./Cart.css";
 import { useGlobalContext } from "../../context";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import axios from "axios";
 function Cart() {
   const { customer, setShowCart } = useGlobalContext();
@@ -53,9 +53,7 @@ const FullCart = ({ customer }) => {
   const { setCustomer } = useGlobalContext();
 
   const handleDeleteCart = async () => {
-    const DeletedCart = await axios.delete(
-      `http://localhost:5000/user/cart/${customer._id}`
-    );
+    const DeletedCart = await axios.delete(`/user/cart/${customer._id}`);
     const data = await DeletedCart.data;
     setCustomer(data);
   };

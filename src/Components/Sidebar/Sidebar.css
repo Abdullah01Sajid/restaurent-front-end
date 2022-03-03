@@ -1,0 +1,26 @@
+.main-sidebar-container {
+  position: fixed;
+  padding-left: 20px;
+  padding-right: 10px;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  flex-direction: column;
+}
+.main-sidebar-container button {
+  padding: 9px;
+  border-radius: 10px;
+  border: none;
+}
+.main-sidebar-container button a {
+  color: var(--main-nav-color);
+  text-decoration: none;
+}
+@media screen and (max-width: 800px) {
+  .main-sidebar-container {
+    display: none;
+  }
+}

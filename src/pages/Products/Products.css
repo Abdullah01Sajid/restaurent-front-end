@@ -1,5 +1,6 @@
 .main-product-page {
-  margin-top: 100px;
+  padding-top: 30px;
+  margin-top: 50px;
   min-height: 120vh;
   background: #e9fffb;
   width: 100%;
@@ -111,4 +112,6 @@
   width: 69px;
   margin-left: 10%;
   background-color: var(--main-nav-color);
+}
+@media screen and (min-width: 800px) {
 }

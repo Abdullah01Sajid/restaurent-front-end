@@ -5,3 +5,6 @@
   --main-button-color: #36a63c;
   --category-color: #c01313;
 }
+html {
+  scroll-behavior: smooth;
+}

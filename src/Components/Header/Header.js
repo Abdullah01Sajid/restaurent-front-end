@@ -16,10 +16,10 @@ function Header() {
         >
           Made in Italy
         </motion.h1>
-        <img src={image_src} style={{ display: "none" }} alt="" />
+        <img style={{ height: "100%", width: "100%" }} src={image_src} alt="" />
       </div>
       <div className="down-header">
-        <h1 style={{ display: "none" }}>Made in Italy</h1>
+        <h1>Made in Italy</h1>
 
         <motion.form
           onSubmit={(e) => handleSubmit(e)}

@@ -2,8 +2,8 @@ import React, { useContext, useState } from "react";
 import axios from "axios";
 const appContext = React.createContext();
 
-const url = "http://localhost:5000/user";
-const searchUrl = "http://localhost:5000/search";
+const url = "/user";
+const searchUrl = "/search";
 const Provider = ({ children }) => {
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
@@ -15,7 +15,7 @@ const Provider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
   const [showSearch, setShowSearch] = useState(false);
-  const [showCart, setShowCart] = useState(true);
+  const [showCart, setShowCart] = useState(false);
 
   const getLocation = () => {
     navigator.geolocation.getCurrentPosition(({ coords }) => {
@@ -70,6 +70,7 @@ const Provider = ({ children }) => {
   return (
     <appContext.Provider
       value={{
+        loading,
         showCart,
         setShowCart,
         showSearch,

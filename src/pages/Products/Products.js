@@ -4,23 +4,24 @@ import { motion } from "framer-motion";
 import { useGlobalContext } from "../../context";
 import axios from "axios";
 import PizzaSection from "../../Components/PizzaSection/PizzaSection";
+import Sidebar from "../../Components/Sidebar/Sidebar";
 import Cart from "../../Components/Cart/Cart";
 // importing users
-const Url = `http://localhost:5000/user`;
+const Url = `/user`;
 // importing products
 // pizzas
-const pizzaUrl = `http://localhost:5000/pizzas`;
+const pizzaUrl = `/pizzas`;
 // pastas
-const pastaUrl = `http://localhost:5000/pastas`;
+const pastaUrl = `/pastas`;
 // bebidas
 //const main_context = React.createContext();
-const postresUrl = `http://localhost:5000/postres`;
-const bebidaUrl = `http://localhost:5000/bebidas`;
+const postresUrl = `/postres`;
+const bebidaUrl = `/bebidas`;
 
 function Products() {
   const {
+    setLoading,
     showCart,
-    setShowCart,
     customer,
     search,
     setSearch,
@@ -29,12 +30,12 @@ function Products() {
     products,
     showSearch,
   } = useGlobalContext();
+
   const [size, setSize] = useState(false);
   const [pizzas, setPizzas] = useState([]);
   const [pastas, setPastas] = useState([]);
   const [postres, setPostres] = useState([]);
   const [bebidas, setBebidas] = useState([]);
-  const [loading, setLoading] = useState(false);
 
   const fetchData = async (urls) => {
     const getData = await axios.get(urls);
@@ -43,10 +44,13 @@ function Products() {
     switch (urls) {
       case pizzaUrl:
         setPizzas(arrays);
+        setLoading(false);
         break;
 
       case pastaUrl:
         setPastas(arrays);
+        setLoading(false);
+
         break;
       case postresUrl:
         setPostres(arrays);
@@ -128,16 +132,17 @@ function Products() {
             <PizzaSection products={products} name={"Products"} />
           </div>
         )}
-        <div className="pizza-section">
+        <Sidebar />
+        <div id="pizza" className="pizza-section">
           <PizzaSection products={pizzas} name={"PIZZA"} />
         </div>
-        <div className="pizza-section">
+        <div id="pasta" className="pizza-section">
           <PizzaSection products={pastas} name={"PASTA"} />
         </div>
-        <div className="pizza-section">
+        <div id="postre" className="pizza-section">
           <PizzaSection products={postres} name={"SWEET"} />
         </div>
-        <div className="pizza-section">
+        <div id="bebida" className="pizza-section">
           <PizzaSection products={bebidas} name={"DRINKS"} />
         </div>
       </div>

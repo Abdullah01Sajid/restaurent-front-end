@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./PizzaSection.css";
 import { useGlobalContext } from "../../context";
 import { motion } from "framer-motion";
@@ -6,15 +6,12 @@ import axios from "axios";
 function PizzaSection({ products, name }) {
   const { customer, setLoading, setCustomer } = useGlobalContext();
   const handleAddToCart = async (name, id, price, ingredients) => {
-    const addToCart = await axios.put(
-      `http://localhost:5000/user/cart/${customer._id}`,
-      {
-        name: name,
-        id: id,
-        ingredients: ingredients,
-        price: price,
-      }
-    );
+    const addToCart = await axios.put(`/user/cart/${customer._id}`, {
+      name: name,
+      id: id,
+      ingredients: ingredients,
+      price: price,
+    });
     const data = await addToCart.data;
     setCustomer(data);
     console.log(data);
@@ -32,6 +29,7 @@ function PizzaSection({ products, name }) {
       >
         <h1>{name}</h1>
       </motion.div>
+
       {products.map((data) => {
         return (
           <SingleProducts

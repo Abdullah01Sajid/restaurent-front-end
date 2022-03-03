@@ -1,0 +1,104 @@
+.backdrop {
+  min-height: 100vh;
+  width: 100%;
+  background: grey;
+  top: 0;
+  opacity: 0.25;
+  position: fixed;
+}
+
+.main-cart-container {
+  background-color: white;
+  height: 80%;
+  width: 80%;
+  left: 10%;
+  position: fixed;
+  border-radius: 10px;
+  padding: 40px;
+  z-index: 4;
+}
+.main-cart-container .top-cart {
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-cart-container .top-cart h3 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: var(--main-nav-color);
+  padding: 6px;
+  border-radius: 10px;
+  border: 5px solid var(--main-nav-color);
+}
+.main-cart-container .empty-cart {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-cart-container .empty-cart h4 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+.bottom-cart {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.bottom-cart .danger,
+.bottom-cart .success {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  outline: none;
+  transition: 300ms;
+  background-color: transparent;
+}
+.bottom-cart .danger {
+  color: red;
+  border: 2px solid red;
+}
+
+.bottom-cart .success {
+  color: green;
+  border: 2px solid green;
+}
+.bottom-cart .success:hover {
+  background-color: green;
+  color: white;
+}
+.bottom-cart .danger:hover {
+  color: white;
+  background-color: red;
+}
+
+@media screen and (min-width: 800px) {
+  .bottom-cart .danger,
+  .bottom-cart .success {
+    font-size: 1rem;
+  }
+  .main-cart-container {
+    width: 50%;
+    left: 28%;
+  }
+}
+
+.full-cart .main-products {
+  margin-top: 4px;
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (min-width: 800px) {
+  .full-cart .main-products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

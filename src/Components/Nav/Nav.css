@@ -13,8 +13,35 @@
 .nav-bar .logo {
   height: 25px;
   margin-left: auto;
-  width: 25px;
+  min-width: 25px;
+  cursor: pointer;
 }
 .nav-bar .logo svg {
   fill: white;
+}
+.nav-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+.top-cart .exit {
+  position: absolute;
+  top: 15px;
+  border: 2px solid var(--main-nav-color);
+  height: 25px;
+  font-weight: 500;
+  width: 25px;
+  border-radius: 50%;
+  color: var(--main-nav-color);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  right: 20px;
+  cursor: pointer;
+}
+.top-cart .exit:hover {
+  color: white;
+  background-color: var(--main-nav-color);
 }

@@ -2,8 +2,10 @@ import React from "react";
 import "./Header.css";
 import { motion } from "framer-motion";
 import image_src from "../../images/pizza-img.jpg";
-
+import { useGlobalContext } from "../../context";
 function Header() {
+  const { name, setName, location, setLocation, handleSubmit } =
+    useGlobalContext();
   return (
     <div className="main-header-section">
       <div className="top-header">
@@ -20,6 +22,7 @@ function Header() {
         <h1 style={{ display: "none" }}>Made in Italy</h1>
 
         <motion.form
+          onSubmit={(e) => handleSubmit(e)}
           initial={{ y: 200 }}
           animate={{ y: 0 }}
           transition={{ duration: 1 }}
@@ -29,6 +32,8 @@ function Header() {
             className="first-input"
             type="text"
             placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
           />
           <br />
 
@@ -37,13 +42,14 @@ function Header() {
             type="text"
             className="second-input"
             placeholder="Location"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
           />
 
           <p>Start with out location</p>
 
           <motion.button
             type="submit"
-            onClick={(e) => e.preventDefault()}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.8 }}
           >

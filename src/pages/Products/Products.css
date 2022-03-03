@@ -1,0 +1,114 @@
+.main-product-page {
+  margin-top: 100px;
+  min-height: 120vh;
+  background: #e9fffb;
+  width: 100%;
+}
+.main-product-page .full {
+  color: white;
+  height: 5rem;
+  background-color: var(--main-nav-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  margin-top: 30px;
+  width: 80%;
+  transition: 500ms;
+  margin-left: 10%;
+}
+.main-info {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-info svg {
+  height: 25px;
+  width: 25px;
+  fill: white;
+}
+.main-product-page .main-info .left-side h5 {
+  font-weight: 400;
+}
+.main-product-page .main-info .left-side {
+  margin-right: 20px;
+  width: 60%;
+  margin-left: 20px;
+}
+
+.main-product-page .searchBar {
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-product-page .searchBar form {
+  width: 80%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+}
+.main-product-page .searchBar form button {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 30px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.main-product-page .searchBar button svg {
+  fill: rgb(192, 192, 192);
+}
+
+.main-product-page .searchBar form input {
+  width: 100%;
+  font-size: 1.2rem;
+  outline: none;
+  background-color: white;
+  padding: 11px;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.main-pizza-section .top-section h1 {
+  border: 5px solid;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: var(--main-nav-color);
+}
+.main-product-page .main-info button {
+  padding: 5px;
+
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+.main-product-page .main-info button:hover {
+  background: black;
+  color: whitesmoke;
+}
+
+.main-product-page .small {
+  overflow: hidden;
+  width: 10%;
+}
+.main-cover {
+  height: 69px;
+  width: 69px;
+  margin-left: 10%;
+  background-color: var(--main-nav-color);
+}
